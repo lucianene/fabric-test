@@ -1,5 +1,5 @@
 # FROM node:latest as node_base
-FROM php:8.0-fpm
+FROM php:8.1-fpm
 
 # COPY --from=node_base . . 
 
@@ -35,6 +35,7 @@ RUN npm install npm@latest -g && \
 #     /var/www/html/storage \
 #     /var/www/html/bootstrap/cache
 
+RUN chmod -R 777 storage
 
 # Expose port 9000 and start php-fpm server (for FastCGI Process Manager)
 EXPOSE 9000
