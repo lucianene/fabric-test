@@ -14,8 +14,8 @@ return new class extends Migration
         Schema::create('records', function (Blueprint $table) {
             $table->id();
             $table->string('title');
-            $table->string('release_year');
-            $table->string('imdb_id');
+            $table->smallInteger('release_year');
+            $table->string('imdb_id')->nullable();
             $table->string('images')->nullable();
             $table->timestamps();
         });

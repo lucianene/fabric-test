@@ -18,11 +18,11 @@ class RecordResource extends JsonResource
         $record = $this;
 
         return [
-            'title'        => $candidate->title,
-            'release_year' => $candidate->release_year,
-            'imdb_id'      => $candidate->imdb_id,
-            'images'       => $candidate->images,
-            'created_at'   => $candidate->created_at,
+            'title'        => $record->title,
+            'release_year' => $record->release_year,
+            'imdb_id'      => $record->imdb_id,
+            'images'       => $record->images,
+            'created_at'   => $record->created_at,
         ];
     }
 }

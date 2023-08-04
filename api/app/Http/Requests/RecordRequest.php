@@ -22,9 +22,9 @@ class RecordRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'title' => 'required',
-            'release_year' => 'required',
-            'imdb_id' => 'required',
+            'title' => 'required|string|min:3',
+            'release_year' => 'required|integer|min:4',
+            'imdb_id' => 'string|nullable',
         ];
     }
 }

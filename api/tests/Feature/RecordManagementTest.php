@@ -37,7 +37,7 @@ class RecordManagementTest extends TestCase
     public function testRecordCreateFails()
     {
         $response = $this->post('/records');
-        $response->assertStatus(302);
+        $response->assertStatus(400);
     }
 
     public function testRecordCreateSuccess()
